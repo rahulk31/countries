@@ -71,4 +71,6 @@ body {
     row-gap: 2.4rem;
     column-gap: 1.2rem;
     margin: 1.8rem auto;
+    font-size: 1.4rem;
+    line-height: 1.4;
 }

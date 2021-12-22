@@ -20,15 +20,17 @@ fetch(url)
             </div>
             <div class="content">
                 <h1 class="country">${response.name.common}</h1>
-                <span class="capital">${response.capital[0] ? response.capital[0] : "NA" }</span>
+                <span class="capital">${response.region}</span>
                 <div class="data">
                     <p class="language">${response.languages[Object.keys(response.languages)[0]] ? response.languages[Object.keys(response.languages)[0]] : "NA"}</p>
                     <p class="currency">$</p>
                     <p class="population">${response.population}</p>
-                    <p class="region">${response.region}</p>
+                    
                 </div>
             </div>
         </div>
         `)
         })
     })
+
+    // <p class="region">${response.capital[0] ? response.capital[0] : "NA" }</p>

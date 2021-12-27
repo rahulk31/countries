@@ -69,7 +69,7 @@ body {
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
     justify-items: center;
-    padding: 3rem 3rem 6rem 3rem;
+    padding: 6rem 3rem 6rem 3rem;
 }
 
 
@@ -77,6 +77,11 @@ body {
 .hero-img {
     justify-self: center;
     width: 70%;
+}
+
+.hero-text {
+    justify-self: start;
+    padding-left: 6rem;
 }
 
 .feature-text {
@@ -119,10 +124,41 @@ body {
         align-items: center;
         justify-items: center;
         gap: 3rem;
+        padding: 6rem 3rem 4rem 3rem;
+
     }
 
     .hero-img-container {
         justify-self: center;
+    }
+
+    .hero-img{
+        width: 50%;
+    }
+
+    .hero-text {
+        justify-self: center;
+        padding-left: 0rem;
+    }
+
+    .tick {
+        width: 3.5rem;
+    }
+}
+
+@media(max-width: 600px) {
+    
+    .hero-img{
+        width: 70%;
+    }
+
+    .hero-text {
+        justify-self: center;
+        padding-left: 0rem;
+    }
+
+    .tick {
+        width: 3rem;
     }
 }
 

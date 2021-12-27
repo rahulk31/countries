@@ -146,3 +146,10 @@ body {
         justify-self: center;
     }
 }
+
+@media(max-width: 600px) {
+    .nav-div {
+        flex-direction: column;
+        gap: 2rem;
+    }
+}

@@ -8,6 +8,7 @@ const oneUrl = "https://restcountries.com/v3.1/name/";
 const allUrl = "https://restcountries.com/v3.1/all";
 
 const inputHandler = (e) => {
+    container.textContent = '';
   if (e.key === "Enter") {
     const url = oneUrl + inputCountry.value;
     const request = new XMLHttpRequest();

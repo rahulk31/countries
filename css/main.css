@@ -20,6 +20,15 @@ body {
   font-family: "Rubik", sans-serif;
 }
 
+a {
+    text-decoration: none;
+}
+
+
+/* ******************** */
+/* TOP */
+/* ******************** */
+
 .section-top {
   padding: 3rem;
   background-color: var(--yellow);
@@ -31,38 +40,33 @@ body {
   color: var(--dark-text);
 }
 
+/* ******************** */
+/* HERO */
+/* ******************** */
+
 .section-header {
   background-color: var(--blue-bg);
-}
-
-.nav-div {
-    padding: 6rem 0 0 0;
-    text-align: center;
-}
-
-.nav-div-bottom {
-    padding: 0 0 6rem 0;
-    text-align: center;
 }
 
 .btn {
     border: none;
     background-color: var(--yellow);
-    padding: 1rem 2.5rem;
-    box-shadow: 0 0 2rem 0.8rem rgba(0, 0, 0, 0.03);
+    padding: 1rem 7rem;
+    box-shadow: 0 0 2rem 0.8rem rgba(0, 0, 0, 0.04);
     border-radius: 100px;
-    margin: 0 1rem;
     font-family: inherit;
     color: var(--light-text);
     cursor: pointer;
     transition: all 0.3s;
-    width: 20rem;
+    font-size: 1.5rem;
+    line-height: 1.5;
 }
 
 .btn:hover {
     box-shadow: 0 0 2rem 0.8rem rgba(0, 0, 0, 0.05);
     background-color: var(--yellow-dark);
 }
+
 
 .main-content {
     display: grid;
@@ -71,8 +75,6 @@ body {
     justify-items: center;
     padding: 6rem 3rem 6rem 3rem;
 }
-
-
 
 .hero-img {
     justify-self: center;
@@ -91,6 +93,12 @@ body {
     gap: 0.8rem;
     font-size: 1.5rem;
     margin: 1rem;
+}
+
+
+.nav-div-bottom {
+    padding: 0 0 6rem 0;
+    text-align: center;
 }
 
 

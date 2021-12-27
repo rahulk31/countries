@@ -18,18 +18,65 @@
     <script defer src="./js/dashboard.js"></script>
   </head>
   <body>
+    <div class="empty"></div>
+
+    <section class="section-main">
+      <div class="nav-grid">
+        <h1>countrySTAT_</h1>
+
+        <div class="search-div">
+          <label for="search"
+            ><ion-icon class="search-icon" name="search-outline"></ion-icon
+          ></label>
+          <input
+            type="text"
+            name="search"
+            id="search"
+            class="search"
+            placeholder="search country"
+          />
+        </div>
+
+        <ul class="nav-options">
+          <a href="#"
+            ><li>
+              <ion-icon name="home-outline"></ion-icon><span>Neighbours</span>
+            </li></a
+          >
+          <a href="#"
+            ><li>
+              <ion-icon name="locate-outline"></ion-icon
+              ><span>All Countries</span>
+            </li></a
+          >
+          <a href="#"
+            ><li>
+              <ion-icon name="grid-outline"></ion-icon><span>Table view</span>
+            </li></a
+          >
+        </ul>
+
+        <div class="socials">
+          <a href="https://www.github.com/rahulk31"
+            ><img src="./assets/github.png" alt="" width="30"
+          /></a>
+          <a href="https://www.linkedin.com/in/devtuber"
+            ><img src="./assets/linkedin.png" alt="" width="30"
+          /></a>
+          <a href="https://www.twitter.com/iamtherahulk"
+            ><img src="./assets/twitter.svg" alt="" width="30"
+          /></a>
+        </div>
+      </div>
+
+      <div class="dynamic-grid">
+        <div class="dynamic-data">data</div>
+      </div>
+    </section>
 
     <!-- ********************************** -->
     <!-- FOOTER -->
     <!-- ********************************** -->
-
-    <footer class="section-footer">
-        <span>Connect with me: </span>
-        <a href="https://www.github.com/rahulk31"><img src="./assets/github.png" alt="" width="30"></a>
-        <a href="https://www.linkedin.com/in/devtuber"><img src="./assets/linkedin.png" alt="" width="30"></a>
-        <a href="https://www.twitter.com/iamtherahulk"><img src="./assets/twitter.svg" alt="" width="30"></a>
-    </footer>
-
 
     <script
       type="module"
@@ -39,6 +86,5 @@
       nomodule
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
     ></script>
-
   </body>
 </html>

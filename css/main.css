@@ -1,0 +1,148 @@
+:root {
+  --yellow: #fde74c;
+  --yellow-dark: #ffd43b;
+  --blue-bg: #f4f9fe;
+  --dark-text: #343434;
+  --light-text: #414752;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+}
+
+.section-top {
+  padding: 3rem;
+  background-color: var(--yellow);
+  text-align: center;
+}
+
+.section-top h1 {
+  font-size: 3rem;
+  color: var(--dark-text);
+}
+
+.section-header {
+  background-color: var(--blue-bg);
+}
+
+.nav-div {
+    padding: 6rem;
+    text-align: center;
+    display: flex;
+    align-items: center;justify-content: center;
+}
+
+.search-div {
+    display: inline-flex;
+    padding: 0 1.5rem;
+    box-shadow: 0 0 2rem 0.8rem rgba(0, 0, 0, 0.03);
+    border-radius: 100px;
+    margin: 0 1rem;
+    background-color: var(--yellow);
+    align-items: center;
+}
+
+.search-icon {
+    width: 20px;
+    height: 20px;
+}
+.search {
+    border: none;
+    background-color: var(--yellow);
+    padding: 1rem;
+    max-width: 12rem;
+    font-family: inherit;
+}
+.search:focus {
+    outline: none;
+}
+
+.btn {
+    border: none;
+    background-color: var(--yellow);
+    padding: 1rem 2.5rem;
+    box-shadow: 0 0 2rem 0.8rem rgba(0, 0, 0, 0.03);
+    border-radius: 100px;
+    margin: 0 1rem;
+    font-family: inherit;
+    color: var(--light-text);
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn:hover {
+    box-shadow: 0 0 2rem 0.8rem rgba(0, 0, 0, 0.05);
+    background-color: var(--yellow-dark);
+}
+
+.main-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    justify-items: center;
+    padding: 3rem 3rem 6rem 3rem;
+}
+
+
+
+.hero-img {
+    justify-self: center;
+    width: 70%;
+}
+
+.feature-text {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 0.8rem;
+    font-size: 1.5rem;
+    margin: 1rem;
+}
+
+
+
+/* *************************** */
+/* Footer */
+/* *************************** */
+
+.section-footer {
+  padding: 2rem;
+  background-color: var(--yellow);
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.section-footer > * {
+    margin-right: 1rem;
+}
+
+.section-footer span {
+    font-size: 1.5rem;
+    color: var(--light-text);
+}
+
+@media(max-width: 1060px) {
+    .main-content {
+        display: grid;
+        grid-template-columns: 1fr;
+        align-items: center;
+        justify-items: center;
+        gap: 3rem;
+    }
+
+    .hero-img-container {
+        justify-self: center;
+    }
+}

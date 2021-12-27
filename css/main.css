@@ -46,6 +46,7 @@ a {
 
 .section-header {
   background-color: var(--blue-bg);
+  padding: 2rem 0;
 }
 
 .btn {
@@ -73,7 +74,7 @@ a {
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
     justify-items: center;
-    padding: 8rem 3rem;
+    padding: 6rem 3rem;
 }
 
 .hero-img {

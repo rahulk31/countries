@@ -141,6 +141,13 @@ ion-icon {
   height: 96vh;
 }
 
+.info {
+  font-size: 2rem;
+  padding: 8rem 0;
+  text-align: center;
+  color: #7b7c7e;
+}
+
 .country-div {
   display: inline-block;
   max-width: 30rem;
@@ -184,4 +191,13 @@ ion-icon {
   margin: 1.8rem auto;
   font-size: 1.4rem;
   line-height: 1.4;
+}
+
+.hidden {
+  display: none;
+}
+
+.small {
+  max-width: 25rem !important;
+  align-items: center;
 }

@@ -3,95 +3,176 @@ const neighbours = document.querySelector(".neighbours");
 const allCountries = document.querySelector(".all-countries");
 const tableView = document.querySelector(".table-view");
 const container = document.querySelector(".container");
+const info = document.querySelector(".info");
 
 const oneUrl = "https://restcountries.com/v3.1/name/";
 const allUrl = "https://restcountries.com/v3.1/all";
+const codeUrl = "https://restcountries.com/v3.1/alpha/";
 
-const inputHandler = (e) => {
-    container.textContent = '';
-  if (e.key === "Enter") {
-    const url = oneUrl + inputCountry.value;
-    const request = new XMLHttpRequest();
-    request.open("GET", url);
-    request.send();
+let currentCountry = {
+  name: '',
+  borders: []
+};
 
-    request.addEventListener("load", () => {
-      const data = JSON.parse(request.responseText);
-
-      try {
-        const [capital] = data[0].capital;
-        const currency = data[0].currencies[Object.keys(data[0].currencies)[0]];
-        const language = data[0].languages[Object.keys(data[0].languages)[0]];
-
-        console.log(data[0]);
-        container.insertAdjacentHTML(
-          "beforeend",
-          `
-                <div class="country-div">
+const displayData = (
+  flag,
+  name,
+  capital,
+  language,
+  population,
+  region,
+  currency,
+  size = ''
+) => {
+  container.insertAdjacentHTML(
+    "beforeend",
+    `
+                <div class="country-div ${size}">
                     <div>
-                        <img class="flag" src=${data[0].flags.svg} alt="">
+                        <img class="flag" src=${flag} alt="">
                     </div>
                     <div class="content">
-                        <h1 class="country">${data[0].name.common}</h1>
+                        <h1 class="country">${name}</h1>
                         <span class="capital">${capital}</span>
                         <div class="data">
                             <p class="currency">${language}</p>
-                            <p class="population">${data[0].population}</p>
-                            <p class="population">${data[0].region}</p>
+                            <p class="population">${population}</p>
+                            <p class="population">${region}</p>
                             <p class="population">${currency.name} (${currency.symbol})</p>
                         </div>
                     </div>
                 </div>
         `
-        );
-      } catch (err) {
-        console.log(err.message);
+  );
+};
+
+const fetchAll = () => {
+  fetch(allUrl)
+    .then((res) => res.json())
+    .then((data) => {
+      info.classList.add("hidden");
+      container.textContent = "";
+      for (let i = 0; i < data.length; i++) {
+        console.log(data[i]);
+        try {
+          const flag = data[i].flags.svg;
+          const name = data[i].name.common;
+          const [capital] = data[i].capital;
+          const language = data[i].languages[Object.keys(data[i].languages)[0]];
+          const population = data[i].population;
+          const region = data[i].region;
+          const currency =
+            data[i].currencies[Object.keys(data[i].currencies)[0]];
+
+          displayData(
+            flag,
+            name,
+            capital,
+            language,
+            population,
+            region,
+            currency
+          );
+        } catch (err) {
+          console.log(err);
+        }
       }
     });
-    inputCountry.value = '';
+};
+
+const fetchOne = (e) => {
+  currentCountry.name = inputCountry.value;
+  inputCountry.value = "";
+  container.textContent = "";
+  fetch(oneUrl + currentCountry.name)
+    .then((res) => res.json())
+    .then((data) => {
+      info.classList.add("hidden");
+      try {
+        const flag = data[0].flags.svg;
+        const name = data[0].name.common;
+        const [capital] = data[0].capital;
+        const language = data[0].languages[Object.keys(data[0].languages)[0]];
+        const population = data[0].population;
+        const region = data[0].region;
+        const currency = data[0].currencies[Object.keys(data[0].currencies)[0]];
+        currentCountry.borders = data[0].borders;
+
+        displayData(
+          flag,
+          name,
+          capital,
+          language,
+          population,
+          region,
+          currency
+        );
+      } catch (err) {
+        console.log(err);
+      }
+    });
+};
+
+const fetchCode = () => {
+  console.log(currentCountry.borders);
+  const cb = currentCountry.borders;
+  for(let i=0; i<cb.length; i++) {
+    fetch(codeUrl+cb[i])
+      .then(res => res.json())
+      .then(data => {
+        try {
+          console.log(data)
+          const flag = data[0].flags.svg;
+          const name = data[0].name.common;
+          const [capital] = data[0].capital;
+          const language = data[0].languages[Object.keys(data[0].languages)[0]];
+          const population = data[0].population;
+          const region = data[0].region;
+          const currency =
+            data[0].currencies[Object.keys(data[0].currencies)[0]];
+
+          displayData(
+            flag,
+            name,
+            capital,
+            language,
+            population,
+            region,
+            currency,
+            'small'
+          );
+        } catch (err) {
+          console.log(err);
+        }
+      })
+  }
+}
+
+const fetchHandler = (arg) => {
+  if (arg === "all") {
+    fetchAll();
+  } else if (arg === "one") {
+    fetchOne();
+  } else if (arg === "code") {
+    fetchCode();
   }
 };
 
-const allCountriesHandler = () => {
-  const request = new XMLHttpRequest();
-  request.open("GET", allUrl);
-  request.send();
-
-  request.addEventListener("load", () => {
-    const data = JSON.parse(request.responseText);
-    for (let i = 0; i < data.length; i++) {
-      try {
-        const [capital] = data[i].capital;
-        const currency = data[i].currencies[Object.keys(data[i].currencies)[0]];
-        const language = data[i].languages[Object.keys(data[i].languages)[0]];
-
-        console.log(data[i]);
-        container.insertAdjacentHTML(
-          "beforeend",
-          `
-                <div class="country-div">
-                    <div>
-                        <img class="flag" src=${data[i].flags.svg} alt="">
-                    </div>
-                    <div class="content">
-                        <h1 class="country">${data[i].name.common}</h1>
-                        <span class="capital">${capital}</span>
-                        <div class="data">
-                            <p class="currency">${language}</p>
-                            <p class="population">${data[i].population}</p>
-                            <p class="population">${data[i].region}</p>
-                            <p class="population">${currency.name} (${currency.symbol})</p>
-                        </div>
-                    </div>
-                </div>
-        `
-        );
-      } catch (err) {
-        console.log(err.message);
-      }
-    }
-  });
-};
-
-inputCountry.addEventListener("keypress", inputHandler);
-allCountries.addEventListener("click", allCountriesHandler);
+inputCountry.addEventListener("keypress", (e) => {
+  if (e.key === "Enter") {
+    fetchHandler("one");
+  }
+});
+neighbours.addEventListener('click', () => {
+  console.log(currentCountry);
+  if(currentCountry.name !== '') fetchHandler('code');
+  else {
+    // container.textContent = '';
+    info.classList.remove('.hidden');
+    info.display = 'block';
+    info.textContent = "Please search for One country at least to see its neighbours!";
+  }
+})
+allCountries.addEventListener("click", () => {
+  fetchHandler("all");
+});

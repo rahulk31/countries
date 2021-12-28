@@ -53,7 +53,6 @@ const fetchAll = () => {
       info.classList.add("hidden");
       container.textContent = "";
       for (let i = 0; i < data.length; i++) {
-        console.log(data[i]);
         try {
           const flag = data[i].flags.svg;
           const name = data[i].name.common;
@@ -116,12 +115,13 @@ const fetchOne = (e) => {
 const fetchCode = () => {
   console.log(currentCountry.borders);
   const cb = currentCountry.borders;
+  currentCountry.name = '';
+  currentCountry.borders = [];
   for(let i=0; i<cb.length; i++) {
     fetch(codeUrl+cb[i])
       .then(res => res.json())
       .then(data => {
         try {
-          console.log(data)
           const flag = data[0].flags.svg;
           const name = data[0].name.common;
           const [capital] = data[0].capital;
@@ -165,9 +165,10 @@ inputCountry.addEventListener("keypress", (e) => {
 });
 neighbours.addEventListener('click', () => {
   console.log(currentCountry);
-  if(currentCountry.name !== '') fetchHandler('code');
+  if(currentCountry.name !== '') {
+    fetchHandler('code');
+  }
   else {
-    // container.textContent = '';
     info.classList.remove('.hidden');
     info.display = 'block';
     info.textContent = "Please search for One country at least to see its neighbours!";

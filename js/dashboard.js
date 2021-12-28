@@ -177,3 +177,8 @@ neighbours.addEventListener('click', () => {
 allCountries.addEventListener("click", () => {
   fetchHandler("all");
 });
+tableView.addEventListener('click', () => {
+  // container.textContent = '';
+  info.classList.remove('hidden');
+  info.innerText = "Feature coming soon";
+});

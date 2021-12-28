@@ -169,16 +169,15 @@ neighbours.addEventListener('click', () => {
     fetchHandler('code');
   }
   else {
-    info.classList.remove('.hidden');
-    info.display = 'block';
-    info.textContent = "Please search for One country at least to see its neighbours!";
+    container.textContent = '';
+  container.insertAdjacentHTML('beforeend', '<p class="info">Search for a country to see its neighbouring countries.</p>');
   }
 })
 allCountries.addEventListener("click", () => {
   fetchHandler("all");
 });
 tableView.addEventListener('click', () => {
-  // container.textContent = '';
-  info.classList.remove('hidden');
-  info.innerText = "Feature coming soon";
+  container.textContent = '';
+  container.insertAdjacentHTML('beforeend', '<p class="info">Feature coming soon.</p>');
+
 });

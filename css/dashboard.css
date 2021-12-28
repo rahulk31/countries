@@ -137,7 +137,7 @@ ion-icon {
   padding: 2rem;
   background-color: #fff;
   border-top-left-radius: 20px;
-  overflow-y: scroll;
+  overflow-y: auto;
   height: 96vh;
 }
 

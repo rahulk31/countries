@@ -182,9 +182,15 @@
     display: none;
   }
 
-  /* @media(max-width: 1100px) {
+  @media(max-width: 1100px) {
       .overflow-table {
           width: 700px;
+          overflow-x: auto;
+      }
+  }
+  @media(max-width: 700px) {
+      .overflow-table {
+          width: 500px;
           overflow-x: auto;
       }
   }
@@ -193,5 +199,5 @@
           width: 300px;
           overflow-x: auto;
       }
-  } */
+  }
   

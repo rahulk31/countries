@@ -11,6 +11,15 @@ All this with a clean and beautiful UI.
 ### tech Stack
 `HTML`, `CSS`, `Javascript`
 
+
+### HomePage
+
 <code><img height="200" src="https://github.com/rahulk31/countries/blob/main/assets/HomepageNew.png"></code>
+
+### Dashboard
+
 <code><img height="200" src="https://github.com/rahulk31/countries/blob/main/assets/Dashboard.png"></code>
+
+### Table View & Download
+
 <code><img height="200" src="https://github.com/rahulk31/countries/blob/main/assets/TableView.png"></code>

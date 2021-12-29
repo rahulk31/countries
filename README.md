@@ -14,12 +14,15 @@ All this with a clean and beautiful UI.
 
 ### HomePage
 
-<code><img src="https://github.com/rahulk31/countries/blob/main/assets/HomepageNew.png"></code>
+<code><img width="300" src="https://github.com/rahulk31/countries/blob/main/assets/HomepageNew.png"></code>
+<code><img width="100" src="https://github.com/rahulk31/countries/blob/main/assets/HomepageMobile.png"></code>
 
 ### Dashboard
 
-<code><img src="https://github.com/rahulk31/countries/blob/main/assets/Dashboard.png"></code>
+<code><img width="300" src="https://github.com/rahulk31/countries/blob/main/assets/Dashboard.png"></code>
+<code><img width="100"src="https://github.com/rahulk31/countries/blob/main/assets/DashboardMobile.png"></code>
 
 ### Table View & Download
 
-<code><img src="https://github.com/rahulk31/countries/blob/main/assets/TableView.png"></code>
+<code><img width="300" src="https://github.com/rahulk31/countries/blob/main/assets/TableView.png"></code>
+<code><img width="100" src="https://github.com/rahulk31/countries/blob/main/assets/TableMobile.png"></code>

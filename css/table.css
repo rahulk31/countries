@@ -64,7 +64,6 @@ ion-icon {
   align-items: center;
   padding: 2rem;
   box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.03);
-
 }
 
 .nav-grid h1 {
@@ -215,7 +214,8 @@ td {
   }
 }
 @media (max-width: 650px) {
-  .empty, .search-div {
+  .empty,
+  .search-div {
     display: none;
   }
 
@@ -230,16 +230,18 @@ td {
 
   .nav-grid {
     flex-direction: row;
-    height: 9vh;
+    height: 10vh;
+    overflow-x: auto;
   }
 
-  .options, .nav-options {
+  .options,
+  .nav-options {
     display: flex;
     align-items: center;
     flex-direction: row;
   }
 
-  .nav-options{
+  .nav-options {
     gap: 2rem;
   }
 
@@ -247,10 +249,9 @@ td {
     background-color: #fff;
     box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.05);
   }
-  
+
   .sort {
     background-color: #fff;
-    
   }
 
   .socials {
@@ -271,7 +272,9 @@ td {
     background-color: #fff;
     border-radius: 50%;
     box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.05);
-
   }
-  
+
+  .container {
+    border-top-right-radius: 20px;
+  }
 }

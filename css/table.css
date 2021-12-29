@@ -100,7 +100,7 @@ ion-icon {
   outline: none;
 }
 
-.nav-options, .sort-div {
+.nav-options {
   margin: 3rem 1rem;
 }
 
@@ -262,13 +262,16 @@ td {
   }
 
   .logo-text {
-    position: absolute;
-    left: 10px;
-    top: 20vh;
-    writing-mode: vertical-rl;
-    text-orientation: upright;
-    color: rgb(223, 219, 219) !important;
-    font-size: 1.5rem !important;
+    display: none;
+  }
+
+  .home-logo {
+    display: block;
+    padding: 1rem;
+    background-color: #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.05);
+
   }
   
 }

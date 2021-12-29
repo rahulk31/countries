@@ -57,12 +57,19 @@ ion-icon {
 }
 
 .nav-grid {
+  /* padding: 1rem;
+  position: relative; */
   padding: 1rem;
-  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+  box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.03);
 }
 
 .nav-grid h1 {
-  padding: 2rem 0;
+  /* padding: 2rem 0; */
   margin: 0 auto;
   text-align: center;
   font-size: 2rem;
@@ -112,11 +119,6 @@ ion-icon {
   padding-left: 1rem;
 }
 
-.socials {
-  position: absolute;
-  left: 4.5rem;
-  bottom: 40px;
-}
 .socials > * {
   margin-right: 1rem;
 }
@@ -202,5 +204,78 @@ ion-icon {
 .small {
   max-width: 25rem !important;
   align-items: center;
+}
+
+/* ************************** */
+/* ************************** */
+/* ************************** */
+/* ************************** */
+/* ************************** */
+/* ************************** */
+/* ************************** */
+/* ************************** */
+/* ************************** */
+
+
+@media (max-width: 650px) {
+  .empty {
+    display: none;
+  }
+
+  .section-main {
+    grid-template-columns: 1fr;
+  }
+
+  .nav-grid {
+    flex-direction: row;
+    height: 10vh;
+    overflow-x: auto;
+  }
+
+  .options, .nav-options {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+  }
+
+  .nav-options{
+    gap: 2rem;
+  }
+  
+  .nav-options li {
+    flex-grow: 1;
+    background-color: #fff;
+    box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.05);
+  }
+  
+  .sort {
+    background-color: #fff;
+    
+  }
+
+  .socials {
+    position: absolute;
+    left: 5px;
+    bottom: 5px;
+    display: flex;
+    flex-direction: column;
+    /* color: rgba(173, 172, 172, 0.03) !important; */
+  }
+
+
+
+  .logo-text {
+    display: none;
+  }
+
+  .home-logo {
+    display: block;
+    padding: 1rem;
+    background-color: #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.05);
+
+  }
+  
 }
 

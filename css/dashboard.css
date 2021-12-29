@@ -125,9 +125,10 @@ ion-icon {
 /* DYNAMIC SECTION */
 /* **************************** */
 
-/* .dynamic-grid {
-    position: static;
-} */
+.dynamic-grid {
+    margin: 0 auto;
+
+}
 
 .container {
   /* display: grid;
@@ -139,6 +140,7 @@ ion-icon {
   border-top-left-radius: 20px;
   overflow-y: auto;
   height: 96vh;
+  margin: 0 auto;
 }
 
 .info {
@@ -201,3 +203,4 @@ ion-icon {
   max-width: 25rem !important;
   align-items: center;
 }
+

@@ -20,12 +20,12 @@ const displayData = (
       <tr>
       <td>${name}</td>
       <td><img src=${flag} width=30px></td>
-      <td>${capital}</td>
+      <td>${capital ? capital : '-'}</td>
       <td>${language}</td>
       <td>${population}</td>
       <td>${region}</td>
       <td>${currency.name}</td>
-      <td>${currency.symbol}</td>
+      <td>${currency.symbol ? currency.symbol : '-'}</td>
     </tr>
           `
     );

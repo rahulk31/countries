@@ -10,3 +10,7 @@ All this with a clean and beautiful UI.
 
 ### tech Stack
 `HTML`, `CSS`, `Javascript`
+
+<code><img height="200" src="https://github.com/rahulk31/countries/blob/main/assets/HomepageNew.png"></code>
+<code><img height="200" src="https://github.com/rahulk31/countries/blob/main/assets/Dashboard.png"></code>
+<code><img height="200" src="https://github.com/rahulk31/countries/blob/main/assets/TableView.png"></code>

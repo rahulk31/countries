@@ -152,9 +152,15 @@ ion-icon {
   color: #7b7c7e;
 }
 
+.country-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .country-div {
   display: inline-block;
-  max-width: 30rem;
+  max-width: 25rem;
   box-shadow: 0 0 2.4rem 3.2rem rgba(0, 0, 0, 0.05);
   border-radius: 11px;
   overflow: hidden;
@@ -202,7 +208,7 @@ ion-icon {
 }
 
 .small {
-  max-width: 25rem !important;
+  max-width: 20rem !important;
   align-items: center;
 }
 

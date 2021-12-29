@@ -27,6 +27,7 @@ const displayData = (
   container.insertAdjacentHTML(
     "beforeend",
     `
+    <div class="country-wrapper">
                 <div class="country-div ${size}">
                     <div>
                         <img class="flag" src=${flag} alt="">
@@ -42,6 +43,7 @@ const displayData = (
                         </div>
                     </div>
                 </div>
+          </div>
         `
   );
 };

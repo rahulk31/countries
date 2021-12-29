@@ -143,6 +143,10 @@ ion-icon {
   overflow-y: auto;
   height: 96vh;
   margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
 
 .info {

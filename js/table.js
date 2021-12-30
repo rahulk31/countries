@@ -1,4 +1,4 @@
-const allCountries = document.querySelector(".all-countries");
+const refresh = document.querySelector(".refresh");
 const sortOption = document.querySelector(".sort");
 const heads = document.querySelector(".heads");
 const table = document.querySelector("table");
@@ -39,6 +39,7 @@ const displayData = ([
 };
 
 const fetchAll = () => {
+  removeData();
   fetch(allUrl)
     .then((res) => res.json())
     .then((data) => {
@@ -106,5 +107,5 @@ const changeHandler = () => {
 
 // Function Calls & Event Listeners
 fetchAll();
-allCountries.addEventListener("click", fetchAll);
+refresh.addEventListener("click", fetchAll);
 sortOption.addEventListener("change", changeHandler);

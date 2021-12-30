@@ -12,6 +12,7 @@ const displayData = (
     language,
     population,
     region,
+    currencyCode,
     currency
   ) => {
     table.insertAdjacentHTML(
@@ -25,7 +26,7 @@ const displayData = (
       <td>${population}</td>
       <td>${region}</td>
       <td>${currency.name}</td>
-      <td>${currency.symbol ? currency.symbol : '-'}</td>
+      <td>${currencyCode} (${currency.symbol ? currency.symbol : '-'})</td>
     </tr>
           `
     );
@@ -43,6 +44,7 @@ const fetchAll = () => {
             const language = data[i].languages[Object.keys(data[i].languages)[0]];
             const population = data[i].population;
             const region = data[i].region;
+            const currencyCode = Object.keys(data[i].currencies)[0];
             const currency =
               data[i].currencies[Object.keys(data[i].currencies)[0]];
   
@@ -53,6 +55,7 @@ const fetchAll = () => {
               language,
               population,
               region,
+              currencyCode,
               currency
             );
           } catch (err) {

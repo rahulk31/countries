@@ -311,6 +311,6 @@ td {
 
 @media(max-width: 500px) {
   .message {
-    left: 10vh;
+    left: 15vh;
   }
 }

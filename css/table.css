@@ -308,3 +308,9 @@ td {
     left: 20vh;
   }
 }
+
+@media(max-width: 500px) {
+  .message {
+    left: 10vh;
+  }
+}

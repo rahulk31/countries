@@ -1,7 +1,6 @@
 const inputCountry = document.querySelector(".search");
 const neighbours = document.querySelector(".neighbours");
 const allCountries = document.querySelector(".all-countries");
-const tableView = document.querySelector(".table-view");
 const container = document.querySelector(".container");
 const info = document.querySelector(".info");
 
@@ -177,9 +176,4 @@ neighbours.addEventListener('click', () => {
 })
 allCountries.addEventListener("click", () => {
   fetchHandler("all");
-});
-tableView.addEventListener('click', () => {
-  container.textContent = '';
-  container.insertAdjacentHTML('beforeend', '<p class="info">Feature coming soon.</p>');
-
 });

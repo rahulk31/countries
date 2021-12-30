@@ -146,7 +146,7 @@ ion-icon {
     } */
 .container {
   width: 100%;
-  padding: 2rem;
+  padding: 1rem;
   margin: 0 auto;
   background-color: #fff;
   border-top-left-radius: 20px;
@@ -168,20 +168,16 @@ ion-icon {
 }
 
 table {
-  margin: 2rem;
+  margin: 1rem;
   /* border: 1px solid var(--light-text); */
   padding: 2rem;
   font-size: 1.2rem;
   border-collapse: collapse;
   text-align: center;
   overflow: hidden;
-  box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.03);
+  box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.03);
   border-radius: 20px;
   /* background-color: var(--blue-bg); */
-}
-
-tr:nth-child(even) {
-  background-color: var(--blue-bg);
 }
 
 th {
@@ -197,15 +193,45 @@ td {
   color: var(--light-text);
 }
 
+.message {
+  position: absolute;
+  bottom: 10vh;
+  left: 42vw;
+  font-size: 1.5rem;
+  max-width: 40rem;
+  background-color: var(--yellow-dark);
+  padding: 1rem 1.5rem;
+  color: var(--light-text);
+  border-radius: 3px;
+  border-left: 5px solid var(--light-text);
+  animation: fadeOut 3s linear forwards;
+}
+
+@keyframes fadeOut {
+	0% 	{ opacity: 0; }
+	10% { opacity: 1; }
+	90% { opacity: 1; transform: translateY(0px);}
+	99% { opacity: 0; transform: translateY(30px);}
+	100% { opacity: 0; }
+}
+
 .hidden {
   display: none;
 }
 
 @media (max-width: 1200px) {
   .overflow-table {
-    width: 500px;
+    max-width: 700px;
     overflow-x: auto;
   }
+
+}
+@media (max-width: 965px) {
+  .overflow-table {
+    max-width: 500px;
+    overflow-x: auto;
+  }
+
 }
 @media (max-width: 800px) {
   .overflow-table {
@@ -276,5 +302,9 @@ td {
 
   .container {
     border-top-right-radius: 20px;
+  }
+
+  .message {
+    left: 20vh;
   }
 }
